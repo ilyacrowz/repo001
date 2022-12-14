@@ -272,3 +272,58 @@ void PrintNatrix (int[,] matrix)
   }
 }
 PrintNatrix(matrix);
+
+// Задача 63: Задайте значение N. Напишите программу, которая выведет
+//  все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+
+void Numbers (int num)
+{
+if (num == 0)
+{
+return;
+}
+Console.Write($"{num} ");
+Numbers(num -1);
+}
+Console.Write("Введите число: ");
+int nums = Convert.ToInt32(Console.ReadLine());
+Numbers(nums);
+
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+
+// int sum = 0;
+// void SumNum (int num) {
+// if (num == 0) {
+// Console.Write(sum);
+// return;
+// }
+// else {
+// sum += num%10;
+// SumNum(num/10);
+// }
+// }
+// int num = int.Parse(Console.ReadLine());
+// SumNum(num);
+
+
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+// int Stepen (int a,int b){
+// if (b==0) return 1;
+// return a*Stepen(a,b-1);
+// }
+
+// Console.WriteLine("Введите А");
+// int a = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите B");
+// int b = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(Stepen(a,b));
